@@ -1,25 +1,32 @@
-import { config } from "dotenv"
-config()
+import { config } from "dotenv";
+config();
 
-import { Configuration, OpenAIApi } from "openai"
-import readline from "readline"
+import { Configuration, OpenAIApi } from "openai";
+import inquirer from "inquirer";
 
-const openai =new OpenAIApi(new Configuration({
-    apiKey: process.env.API_KEY
-}));
+const openai = new OpenAIApi(
+  new Configuration({
+    apiKey: process.env.API_KEY,
+  })
+);
 
-const userInterface = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+async function promptUser() {
+  const { input } = await inquirer.prompt([
+    {
+      type: "input",
+      name: "input",
+      message: "Enter your input:",
+    },
+  ]);
 
-userInterface.prompt()
-userInterface.on("line", async input => {
-   const res = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: input}]
-    });
+  const res = await openai.createChatCompletion({
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: input }],
+  });
 
-    console.log(res.data.choices[0].message.content);
-    userInterface.prompt();
-});
+  console.log(res.data.choices[0].message.content);
+
+  promptUser();
+}
+
+promptUser();
