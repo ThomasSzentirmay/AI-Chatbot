@@ -24,6 +24,6 @@ Talk with one of the worlds most advanced AI Chat bots, and use them for all of 
 
 ## Future Updates Planned
 
--Will keep the GPT engine in this project updated for each new release that OpenAI implements (eg. upgrade to GPT-4)
--'Fine Tune' the Open AI API to further it's knowledge on specific topics and/or data sets (https://platform.openai.com/docs/guides/fine-tuning)
--Build a front-end for the application
+- Will keep the GPT engine in this project updated for each new release that OpenAI implements (eg. upgrade to GPT-4)
+- 'Fine Tune' the Open AI API to further it's knowledge on specific topics and/or data sets (https://platform.openai.com/docs/guides/fine-tuning)
+- Build a front-end for the application
