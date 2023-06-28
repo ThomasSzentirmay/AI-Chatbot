@@ -1,4 +1,4 @@
-# AI-Chatbot
+# Node-AI-Chatbot
 
 ## Description
 
