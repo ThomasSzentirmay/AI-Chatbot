@@ -24,7 +24,7 @@ async function promptUser() {
     messages: [{ role: "user", content: input }],
   });
 
-  console.log(res.data.choices[0].message.content);
+  console.log("\x1b[1mGPT Response:\x1b[0m", res.data.choices[0].message.content);
 
   promptUser();
 }
