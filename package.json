@@ -5,7 +5,7 @@
   "type": "module",
   "main": "server.cjs",
   "scripts": {
-    "start": "node --experimental-modules server.cjs"
+    "start": "node --experimental-modules server.mjs"
   },
   "keywords": [],
   "author": "",
