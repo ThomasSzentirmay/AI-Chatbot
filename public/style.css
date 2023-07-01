@@ -134,7 +134,22 @@ body {
 }
 
 .creator-info {
-  text-align: center;
-  margin-top: 590px;
+  margin-top: 25vh;
   color: #888;
+  word-wrap: break-word;
+  margin-bottom: 30px;
+}
+
+.github-link {
+  color: #888;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+.credits {
+  text-align: center;
 }
