@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "index.js",
+  "main": "server.cjs",
   "scripts": {
-    "test": "node script.js"
+    "start": "node --experimental-modules server.cjs"
   },
   "keywords": [],
   "author": "",

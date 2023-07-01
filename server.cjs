@@ -1,3 +1,6 @@
+import { config } from "dotenv";
+config();
+
 import express from 'express';
 import { join } from 'path';
 import { Configuration, OpenAIApi } from 'openai';
