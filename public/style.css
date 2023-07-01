@@ -41,6 +41,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #282c34;
+  max-width: 75%;
 }
 
 .chat-header {
@@ -129,4 +130,10 @@ body {
 
 .new-chat-button:hover {
   background-color: #45a049;
+}
+
+.creator-info {
+  text-align: center;
+  margin-top: auto;
+  color: #888;
 }
