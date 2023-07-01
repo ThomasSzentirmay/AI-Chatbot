@@ -3,11 +3,6 @@ const userInput = document.getElementById('user-input');
 const sendButton = document.getElementById('send-button');
 const chatFeed = document.querySelector('.chat-feed');
 
-// Initialize OpenAI API client
-const openai = new OpenAIApi({
-  apiKey: process.env.API_KEY,
-});
-
 // Function to add a message to the chat feed
 function addMessage(role, content) {
   const messageClass = role === 'user' ? 'user-message' : 'ai-message';
@@ -27,13 +22,16 @@ async function sendMessage() {
   userInput.value = ''; // Clear input field
 
   // Send user input to the API
-  const res = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: input }],
+  const response = await fetch('/api/chat', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ input })
   });
 
-  const responseContent = res.data.choices[0].message.content;
-  addMessage('ai', responseContent);
+  const { message } = await response.json();
+  addMessage('ai', message);
 }
 
 // Event listener for the send button
