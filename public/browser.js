@@ -8,10 +8,40 @@ function addMessage(role, content) {
   const messageClass = role === 'user' ? 'user-message' : 'ai-message';
   const messageElement = document.createElement('li');
   messageElement.classList.add(messageClass);
-  messageElement.textContent = content;
   chatFeed.appendChild(messageElement);
-  // Scroll to the bottom of the chat feed
-  chatFeed.scrollTop = chatFeed.scrollHeight;
+
+  // Function to gradually type out the message content for AI response
+  function typeMessage(content) {
+    return new Promise(resolve => {
+      const typingDelay = 50; // Delay between typing each character
+      let i = 0;
+
+      function typeNextCharacter() {
+        if (i < content.length) {
+          messageElement.textContent += content[i];
+          i++;
+          setTimeout(typeNextCharacter, typingDelay);
+        } else {
+          resolve();
+        }
+      }
+
+      typeNextCharacter();
+    });
+  }
+
+  // Add the content to the message element immediately for user input
+  if (role === 'user') {
+    messageElement.textContent = content;
+    // Scroll to the bottom of the chat feed
+    chatFeed.scrollTop = chatFeed.scrollHeight;
+  } else {
+    // Start typing the message content for AI response
+    typeMessage(content).then(() => {
+      // Scroll to the bottom of the chat feed
+      chatFeed.scrollTop = chatFeed.scrollHeight;
+    });
+  }
 }
 
 // Function to handle user input and send it to the API

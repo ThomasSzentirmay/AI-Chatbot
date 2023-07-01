@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #282c34;
+  color: #fff;
 }
 
 .chat-container {
@@ -11,7 +15,7 @@ body {
 
 .chat-list {
   width: 25%;
-  background-color: #f1f1f1;
+  background-color: #1f2229;
   padding: 20px;
 }
 
@@ -23,24 +27,34 @@ body {
 .chat-list li {
   padding: 10px;
   cursor: pointer;
+  font-weight: 600;
+  color: #a8a8a8;
+  transition: background-color 0.3s ease;
 }
 
 .chat-list li.active {
-  background-color: #ddd;
+  background-color: #2f323a;
 }
 
 .chat-window {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  background-color: #282c34;
 }
 
 .chat-header {
-  background-color: #f1f1f1;
+  background-color: #1f2229;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.chat-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .chat-feed {
@@ -55,20 +69,23 @@ body {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
+  font-weight: 500;
 }
 
 .user-message {
-  background-color: #e6f7ff;
+  background-color: #333;
+  color: #fff;
 }
 
 .ai-message {
-  background-color: #f2f2f2;
+  background-color: #1f2229;
 }
 
 .input-container {
   display: flex;
   align-items: center;
   padding: 20px;
+  background-color: #1f2229;
 }
 
 .input-container input {
@@ -76,6 +93,9 @@ body {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 14px;
+  background-color: #282c34;
+  color: #fff;
 }
 
 .input-container button {
@@ -86,6 +106,13 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+  background-color: #45a049;
 }
 
 .new-chat-button {
@@ -95,4 +122,11 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.new-chat-button:hover {
+  background-color: #45a049;
 }
