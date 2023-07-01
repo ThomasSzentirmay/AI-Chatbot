@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat GPT</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-list">
+      <ul>
+        <li class="active">Chat 1</li>
+        <li>Chat 2</li>
+        <li>Chat 3</li>
+      </ul>
+    </div>
+    <div class="chat-window">
+      <div class="chat-header">
+        <h2>Chat 1</h2>
+        <button class="new-chat-button">New Chat</button>
+      </div>
+      <ul class="chat-feed">
+        <li class="user-message">Hello, how can I help you?</li>
+        <li class="ai-message">I'm an AI assistant. Ask me anything!</li>
+      </ul>
+      <div class="input-container">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./browser.js"></script>
+</body>
+</html>
