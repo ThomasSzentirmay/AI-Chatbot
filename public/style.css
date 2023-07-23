@@ -134,7 +134,7 @@ body {
 }
 
 .creator-info {
-  margin-top: 25vh;
+  margin-top: 20vh;
   color: #888;
   word-wrap: break-word;
   margin-bottom: 30px;
@@ -152,4 +152,14 @@ body {
 
 .credits {
   text-align: center;
+}
+
+.note-text {
+  color: #888;
+  padding: 0;
+  margin: 0;
+}
+
+.gimme-margin {
+  margin-bottom: 15px;
 }

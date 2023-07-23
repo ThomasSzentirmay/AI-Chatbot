@@ -12,7 +12,7 @@ Technologies used: HTML, CSS, JavaScript, Node, Express, openai API, and Git.
 ![gpt demo ss](https://github.com/ThomasSzentirmay/JS-code-quiz/assets/132217664/ab66f2bf-57fc-4c3e-bcd0-6d399cc7dbc4)
 
 
-Video Demo: https://drive.google.com/file/d/14dSa5ljJydShYlmwlhhDACncI62hHvj_/view?usp=sharing
+Deployed link (Please don't drain the API calls!): https://openai-clone-aba1d34bf9c0.herokuapp.com/
 
 ## Usage
 
