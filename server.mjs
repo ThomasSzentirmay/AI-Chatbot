@@ -12,7 +12,7 @@ const __dirname = dirname(__filename);
 config();
 
 const app = express();
-const port = 3333;
+const port = process.env.PORT || 3333;
 
 // Middleware to parse the request body as JSON
 app.use(express.json());
