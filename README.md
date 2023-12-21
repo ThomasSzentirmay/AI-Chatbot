@@ -9,10 +9,7 @@ This project has both a front-end and a back-end, and uses Express.JS to create 
 Technologies used: HTML, CSS, JavaScript, Node, Express, openai API, and Git.
 
 
-![gpt demo ss](https://github.com/ThomasSzentirmay/JS-code-quiz/assets/132217664/ab66f2bf-57fc-4c3e-bcd0-6d399cc7dbc4)
-
-
-Deployed link (You are more than welcome to test it out but please don't drain the API calls!): https://openai-clone-aba1d34bf9c0.herokuapp.com/
+Deployed link (API calls have been drained unfortunately)
 
 ## Usage
 
